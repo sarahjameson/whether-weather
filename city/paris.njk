@@ -1,0 +1,66 @@
+---
+layout: layout.njk
+title: Paris
+permalink: /city/paris/index.html
+---
+
+{% set city = {
+  name: "Paris",
+  image: "/images/paris.jpg",
+  temp: "18°C",
+  path: "/city/paris/"
+} %}
+
+<section class="section">
+  <div class="container">
+    <h1 class="title">{{ city.name }}</h1>
+
+    <div class="columns">
+      <!-- City card -->
+      <div class="column is-4">
+        {% include "city-card-component.njk" %}
+      </div>
+
+      <!-- Weather details -->
+      <div class="column is-8">
+        <h2 class="subtitle">Weather Today</h2>
+        <table class="table is-fullwidth">
+          <thead>
+            <tr>
+              <th>Right now</th>
+              <th>Max temp</th>
+              <th>Max wind</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>18°C 10km/h</td>
+              <td>22°C</td>
+              <td>15km/h</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <h2 class="subtitle">Weekly Forecast</h2>
+        <table class="table is-fullwidth is-striped">
+          <thead>
+            <tr>
+              <th>Day</th>
+              <th>High</th>
+              <th>Low</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>Monday</td><td>20°C</td><td>12°C</td></tr>
+            <tr><td>Tuesday</td><td>21°C</td><td>13°C</td></tr>
+            <tr><td>Wednesday</td><td>19°C</td><td>11°C</td></tr>
+            <tr><td>Thursday</td><td>22°C</td><td>14°C</td></tr>
+            <tr><td>Friday</td><td>21°C</td><td>13°C</td></tr>
+            <tr><td>Saturday</td><td>20°C</td><td>12°C</td></tr>
+            <tr><td>Sunday</td><td>19°C</td><td>11°C</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</section>

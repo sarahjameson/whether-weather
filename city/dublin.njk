@@ -1,0 +1,63 @@
+---
+layout: layout.njk
+title: Dublin
+---
+
+{% set city = {
+  name: "Dublin",
+  image: "/images/dublin.jpg",
+  temp: "11°C",
+  path: "/city/dublin/"
+} %}
+
+<section class="section">
+  <div class="container">
+    <h1 class="title">{{ city.name }}</h1>
+
+    <div class="columns">
+      <div class="column is-4">
+        {% include "city-card-component.njk" %}
+      </div>
+
+      <div class="column is-8">
+        <h2 class="subtitle">Weather Today</h2>
+        <table class="table is-fullwidth">
+          <thead>
+            <tr>
+              <th>Right now</th>
+              <th>Max temp</th>
+              <th>Max wind</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>11°C 14km/h</td>
+              <td>15°C</td>
+              <td>22km/h</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <h2 class="subtitle">Weekly Forecast</h2>
+        <table class="table is-fullwidth is-striped">
+          <thead>
+            <tr>
+              <th>Day</th>
+              <th>High</th>
+              <th>Low</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>Monday</td><td>13°C</td><td>8°C</td></tr>
+            <tr><td>Tuesday</td><td>14°C</td><td>9°C</td></tr>
+            <tr><td>Wednesday</td><td>12°C</td><td>7°C</td></tr>
+            <tr><td>Thursday</td><td>15°C</td><td>10°C</td></tr>
+            <tr><td>Friday</td><td>14°C</td><td>9°C</td></tr>
+            <tr><td>Saturday</td><td>13°C</td><td>8°C</td></tr>
+            <tr><td>Sunday</td><td>12°C</td><td>7°C</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</section>

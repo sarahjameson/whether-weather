@@ -1,0 +1,27 @@
+---
+layout: layout.njk
+title: Dashboard
+---
+
+<section class="section">
+  <div class="container">
+    <h1 class="title">My dashboard</h1>
+
+    {% set cities = [
+      { name: "London", image: "/images/london.jpg", temp: "12°C", path: "/city/london/" },
+      { name: "Paris", image: "/images/paris.jpg", temp: "12°C", path: "/city/paris/" },
+      { name: "Berlin", image: "/images/berlin.jpg", temp: "12°C", path: "/city/berlin/" },
+      { name: "Rome", image: "/images/rome.jpg", temp: "12°C", path: "/city/rome/" },
+      { name: "Athens", image: "/images/athens.jpg", temp: "12°C", path: "/city/athens/" },
+      { name: "Dublin", image: "/images/dublin.jpg", temp: "12°C", path: "/city/dublin/" }
+    ] %}
+
+    <div class="columns is-multiline">
+      {% for city in cities %}
+        <div class="column is-one-third">
+          {% include "city-card-component.njk" %}
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
