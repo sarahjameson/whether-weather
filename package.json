@@ -1,0 +1,6 @@
+{
+  "scripts": {
+    "build": "eleventy",
+    "start": "eleventy --serve"
+  }
+}
